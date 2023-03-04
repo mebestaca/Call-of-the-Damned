@@ -1,0 +1,362 @@
+Call of the Damned Init
+
+    Events
+
+        Map initialization
+
+    Conditions
+
+    Actions
+
+        --------   --------
+
+        -------- Main Ability --------
+
+        Set CD_Ability = Call of the Damned
+
+        --------   --------
+
+        -------- Orderstring of the Main ability --------
+
+        Set CD_AbilityOrder = starfall
+
+        --------   --------
+
+        -------- Ability that switches the Main Ability with the Fake Ability --------
+
+        -------- Note: This is necessary to avoid double casting the ability by the same unit --------
+
+        Set CD_SwitchAbility = Switch Call of the Damned
+
+        --------   --------
+
+        -------- Unit-type of the summoned unit which will appear on the center --------
+
+        -------- Note: Its usually the strongest unit in the batch --------
+
+        Set CD_SummonedUnitType[1] = Doom Guard - level 1
+
+        Set CD_SummonedUnitType[2] = Doom Guard - level 2
+
+        Set CD_SummonedUnitType[3] = Doom Guard - level 3
+
+        Set CD_SummonedUnitType[4] = Doom Guard - level 4
+
+        --------   --------
+
+        -------- The number of summoned units which will appear in the center of the circle --------
+
+        Set CD_SummonedUnitCount[1] = 1
+
+        Set CD_SummonedUnitCount[2] = 1
+
+        Set CD_SummonedUnitCount[3] = 1
+
+        Set CD_SummonedUnitCount[4] = 1
+
+        --------   --------
+
+        -------- Unit-type of the bonus unit that comes with the summoned unit once the summoning is complete --------
+
+        Set CD_BonusUnitType[1] = Fel Beast - level 1
+
+        Set CD_BonusUnitType[2] = Fel Beast - level 2
+
+        Set CD_BonusUnitType[3] = Fel Beast - level 3
+
+        Set CD_BonusUnitType[4] = Fel Beast - level 4
+
+        --------   --------
+
+        -------- The number of additional units that are summoned with each apprentice --------
+
+        -------- Note: When i mentioned apprentice im referring to acolytes --------
+
+        Set CD_BonusUnitCount[1] = 1
+
+        Set CD_BonusUnitCount[2] = 1
+
+        Set CD_BonusUnitCount[3] = 1
+
+        Set CD_BonusUnitCount[4] = 1
+
+        --------   --------
+
+        -------- How long will the summoned units last in our realm --------
+
+        -------- Note: If you want the summoned units to be permanent then make the value equal to zero (0) --------
+
+        Set CD_SummonedUnitDuration[1] = 120.00
+
+        Set CD_SummonedUnitDuration[2] = 120.00
+
+        Set CD_SummonedUnitDuration[3] = 120.00
+
+        Set CD_SummonedUnitDuration[4] = 120.00
+
+        --------   --------
+
+        -------- How long will it take to finish summoning --------
+
+        -------- Note: It should be less than the casting time of the main ability --------
+
+        Set CD_CastingTime[1] = 30.00
+
+        Set CD_CastingTime[2] = 30.00
+
+        Set CD_CastingTime[3] = 30.00
+
+        Set CD_CastingTime[4] = 30.00
+
+        --------   --------
+
+        -------- How many apprentice are allowed to help the caster --------
+
+        Set CD_ApprenticeUnitAllowed[1] = 2
+
+        Set CD_ApprenticeUnitAllowed[2] = 3
+
+        Set CD_ApprenticeUnitAllowed[3] = 4
+
+        Set CD_ApprenticeUnitAllowed[4] = 5
+
+        --------   --------
+
+        -------- The amount of casting time reduced when an apprentice helps the caster --------
+
+        Set CD_CastingTimeReduction[1] = 2.00
+
+        Set CD_CastingTimeReduction[2] = 2.00
+
+        Set CD_CastingTimeReduction[3] = 2.00
+
+        Set CD_CastingTimeReduction[4] = 2.00
+
+        --------   --------
+
+        -------- How large is the detection radius of each formation circle dedicated for the apprentice --------
+
+        Set CD_ApprenticeAoE[1] = 100.00
+
+        Set CD_ApprenticeAoE[2] = 100.00
+
+        Set CD_ApprenticeAoE[3] = 100.00
+
+        Set CD_ApprenticeAoE[4] = 100.00
+
+        --------   --------
+
+        -------- The actual size of the summoning circle --------
+
+        -------- Note: this is not the actual model circle but it determines how far are the apprentices from the center --------
+
+        Set CD_SummoningCircleAoE[1] = 500.00
+
+        Set CD_SummoningCircleAoE[2] = 500.00
+
+        Set CD_SummoningCircleAoE[3] = 500.00
+
+        Set CD_SummoningCircleAoE[4] = 500.00
+
+        --------   --------
+
+        -------- How far from the center of the summoning circle will the bonus units appear --------
+
+        Set CD_BonusUnitOffset[1] = 250.00
+
+        Set CD_BonusUnitOffset[2] = 250.00
+
+        Set CD_BonusUnitOffset[3] = 250.00
+
+        Set CD_BonusUnitOffset[4] = 250.00
+
+        --------   --------
+
+        -------- How large is the summoning circle model --------
+
+        -------- Note: the value comes in %. meaning 200 = 2x the size of the actual model --------
+
+        Set CD_SummoningCircleSize[1] = 300.00
+
+        Set CD_SummoningCircleSize[2] = 300.00
+
+        Set CD_SummoningCircleSize[3] = 300.00
+
+        Set CD_SummoningCircleSize[4] = 300.00
+
+        --------   --------
+
+        -------- Model used as the summoning circle --------
+
+        Set CD_SummoningCircleSFX = SharedModels\UBirth.mdl
+
+        --------   --------
+
+        -------- Transparency of the summoning circle --------
+
+        -------- Note:for this model i need a transparency to remove the creepy claw in it --------
+
+        Set CD_SummoningCircleTransparency = 1.00
+
+        --------   --------
+
+        -------- Model used once the summoning is complete/cancelled --------
+
+        Set CD_CleanSFX = Objects\Spawnmodels\Undead\UDeathMedium\UDeath.mdl
+
+        --------   --------
+
+        -------- The amount of time before the summoning circle vanishes when the summoning is complete/cancelled --------
+
+        -------- Note: the value is 2.10 to fit the spell visuals --------
+
+        Set CD_SummoningCircleDelay = 2.10
+
+        --------   --------
+
+        -------- Special effects found at the center of the summoning circle while summoning for added visuals --------
+
+        Set CD_SummoningGroundSFX1 = Abilities\Spells\Undead\Unsummon\UnsummonTarget.mdl
+
+        Set CD_SummoningGroundSFX2 = Abilities\Spells\Undead\Darksummoning\DarkSummonTarget.mdl
+
+        --------   --------
+
+        -------- The model used as indicator on where the caster stands and where the acolytes must stand --------
+
+        Set CD_FormationSFX = Abilities\Spells\Undead\Darksummoning\DarkSummonTarget.mdl
+
+        --------   --------
+
+        -------- The model used to indicate that the acolytes are helping the caster summon --------
+
+        Set CD_NotifySFX = Abilities\Spells\Items\TomeOfRetraining\TomeOfRetrainingCaster.mdl
+
+        --------   --------
+
+        -------- The model used as an indicator that the summoning has been successful --------
+
+        -------- Note: It appears at the center of the circle --------
+
+        Set CD_SpawnSFX = Doodads\Cinematic\ShimmeringPortal\ShimmeringPortal.mdl
+
+        --------   --------
+
+        -------- The animation of the substitute units --------
+
+        -------- Note: Substitute unit looks like the helping unit the only difference is they cannot be selected --------
+
+        -------- and are only there for the visuals --------
+
+        Set CD_SubstituteAnimation = work
+
+        --------   --------
+
+        -------- The interval on which the animation of the substitute units are called while summoning --------
+
+        -------- Note: Substitute unit looks like the helping unit the only difference is they cannot be selected --------
+
+        -------- and are only there for the visuals --------
+
+        Set CD_SubstituteInterval = 2.26
+
+        --------   --------
+
+        -------- The model used for the flying souls during the summoning ritual --------
+
+        Set CD_SoulSFX = Abilities\Weapons\ZigguratMissile\ZigguratMissile.mdl
+
+        --------   --------
+
+        -------- The maximum height of the souls --------
+
+        Set CD_SoulMaxHeight = 500.00
+
+        --------   --------
+
+        -------- The rotation of the souls --------
+
+        -------- Note: True of clockwise and False if counter-clockwise --------
+
+        Set CD_IsClockwise = True
+
+        --------   --------
+
+        -------- The speed of the rotation of the souls around the center of the circle --------
+
+        Set CD_SoulTurnRate = 3.00
+
+        --------   --------
+
+        -------- The amount of time before the soul reaches the center from the outside of the circle --------
+
+        Set CD_SoulDelay = 1.00
+
+        --------   --------
+
+        -------- The rate on which the souls are ascending or descending --------
+
+        Set CD_SoulHeightSpeed = 5.00
+
+        --------   --------
+
+        -------- The Unit-Type of the unit that can help with the summoning --------
+
+        Set CD_ApprenticeUnitType = Acolyte
+
+        --------   --------
+
+        -------- The Unit-Type of the substitute unit --------
+
+        -------- Note: Substitute unit looks like the helping unit the only difference is they cannot be selected --------
+
+        -------- and are only there for the visuals --------
+
+        Set CD_SubstituteUnitType = Apprentice
+
+        --------   --------
+
+        -------- The Unit-Type of the multipurpose dummy --------
+
+        Set CD_DummyUnitType = Dummy
+
+        --------   --------
+
+        -------- NECESSARRY ACTIONS --------
+
+        -------- Note: Do NOT tamper unless you know what you are doing --------
+
+        --------   --------
+
+        -------- Disable the switch ability to all players --------
+
+        For each (Integer CD_TempInt) from 1 to 12, do (Actions)
+
+            Loop - Actions
+
+                Player - Disable Switch Call of the Damned  for (Player(CD_TempInt))
+
+        --------   --------
+
+        -------- Preload --------
+
+        Set CD_Point1 = (Random point in (Playable map area))
+
+        Unit - Create 1 CD_DummyUnitType for Neutral Passive at CD_Point1 facing Default building facing degrees
+
+        Set CD_Harvester = (Last created unit)
+
+        --------   --------
+
+        Unit - Add CD_Ability to CD_Harvester
+
+        Unit - Remove CD_Ability from CD_Harvester
+
+        --------   --------
+
+        Unit - Add Harvest (Gold and Lumber) to CD_Harvester
+
+        --------   --------
+
+        Custom script:   call RemoveLocation(udg_CD_Point1)
+

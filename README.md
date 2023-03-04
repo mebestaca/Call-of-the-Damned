@@ -1,4 +1,4 @@
-# Call-of-the-Damned
+# Call of the Damned
 A spell made using Warcraft 3 World Editor. This spell is submitted and approved at https://www.hiveworkshop.com/threads/call-of-the-damned-v1-0.289506/ Written in GUI Jass
 
 ## Description
